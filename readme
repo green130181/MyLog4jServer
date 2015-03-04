@@ -1,0 +1,34 @@
+注意 很重要
+在这段中改动(看下面代码第12行)
+LoggerRepository configureHierarchy(InetAddress inetAddress) {
+    cat.info("Locating configuration file for "+inetAddress);
+    // We assume that the toSting method of InetAddress returns is in
+    // the format hostname/d1.d2.d3.d4 e.g. torino/192.168.1.1
+    String s = inetAddress.toString();
+    int i = s.indexOf("/");
+    if(i == -1) {
+      cat.warn("Could not parse the inetAddress ["+inetAddress+
+           "]. Using default hierarchy.");
+      return genericHierarchy();
+    } else {
+      //这个是什么意思,专门取"/"符号吗?明显是错的!闭掉
+//    String key = s.substring(0, i);
+      //改为
+    String key = s.substring(i+1);
+      File configFile = new File(dir, key+CONFIG_FILE_EXT);
+      if(configFile.exists()) {
+    Hierarchy h = new Hierarchy(new RootLogger((Level) Priority.DEBUG));
+    hierarchyMap.put(inetAddress, h);
+    new PropertyConfigurator().doConfigure(configFile.getAbsolutePath(), h);
+    return h;
+      } else {
+    cat.warn("Could not find config file ["+configFile+"].");
+    return genericHierarchy();
+      }
+    }
+  }
+
+http://www.blogjava.net/i369/articles/150966.html
+
+服务端配置参考 （对客户端也有一定的参考意义）
+http://www.open-open.com/bbs/view/1371961903041

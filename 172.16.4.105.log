@@ -1,0 +1,3 @@
+[15/03/04 20:10:38:977] [ID:777] [AsyncTask #2] [com.zkth.mp.FullscreenActivity$MPInitTask-doInBackground] MPInitTask doInBackground in
+[15/03/04 20:10:39:267] [ID:777] [main] [com.zkth.mp.MPApp$MPAppInitTask-onPostExecute] MPAppInitTask onPostExecute in
+[15/03/04 20:10:39:528] [ID:777] [main] [com.zkth.mp.FullscreenActivity$MPInitTask-onPostExecute] MPInitTask onPostExecute in
