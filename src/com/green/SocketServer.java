@@ -22,6 +22,7 @@ import java.io.File;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.DriverManager;
 import java.util.Hashtable;
 
 import org.apache.log4j.Hierarchy;
@@ -32,6 +33,8 @@ import org.apache.log4j.PropertyConfigurator;
 import org.apache.log4j.net.SocketNode;
 import org.apache.log4j.spi.LoggerRepository;
 import org.apache.log4j.spi.RootLogger;
+
+import com.mysql.jdbc.Connection;
 
 
 /**
@@ -104,6 +107,14 @@ public class SocketServer  {
   public
   static
   void main(String argv[]) {
+//	  try {
+//          Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://172.16.15.140:3306/log", "root", "green123");
+//          System.out.println("Success");
+//
+//      } catch (Exception e) {
+//          e.printStackTrace();
+//      }
+	  
     if(argv.length == 3) {
         init(argv[0], argv[1], argv[2]);
     } else {
