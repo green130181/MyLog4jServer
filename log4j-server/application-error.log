@@ -1,8 +1,0 @@
-[2015-03-04 20:15:38,947] [main] [Listening on port 4712]
-[2015-03-04 20:16:36,538] [main] [Listening on port 4712]
-[2015-03-04 20:16:36,539] [main] [Waiting to accept a new client.]
-[2015-03-04 20:17:16,662] [main] [Connected to client at /172.16.4.105]
-[2015-03-04 20:17:16,662] [main] [Locating configuration file for /172.16.4.105]
-[2015-03-04 20:17:16,663] [main] [Open log file ./client_config/172.16.4.105.lcf]
-[2015-03-04 20:17:16,672] [main] [Starting new socket node.]
-[2015-03-04 20:17:16,689] [main] [Waiting to accept a new client.]
