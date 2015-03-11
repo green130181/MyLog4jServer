@@ -32,3 +32,29 @@ http://www.blogjava.net/i369/articles/150966.html
 
 服务端配置参考 （对客户端也有一定的参考意义）
 http://www.open-open.com/bbs/view/1371961903041
+
+
+http://www.mannhaupt.com/danko/projects/jdbcappender/doc/org/apache/log4j/jdbcplus/JDBCAppender.html
+http://www.mannhaupt.com/danko/projects/jdbcappender/src/org/apache/log4j/jdbcplus/examples/test/SourceConfigOracleTest.java
+
+
+JDBCAppender 
+参考这个没问题，可以写入
+http://howtodoinjava.com/2013/04/08/how-to-create-logs-in-database-using-jdbcappender-in-log4j/
+
+创建数据表SQL
+CREATE TABLE appLog
+(
+	timestamp DATETIME(6) NOT NULL,
+	mathineID int NOT NULL,
+	threadName  VARCHAR(128) NOT NULL,
+	className   VARCHAR(128) NOT NULL,
+	methodName  VARCHAR(128) NOT NULL,
+	info  VARCHAR(2048) NOT NULL
+);
+
+如果数据表插入数据有误 
+1.查看DEBUG日志
+2.查看log4j 配置文件，一般是SQL语句写的不对导致的
+
+
