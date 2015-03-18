@@ -57,4 +57,5 @@ CREATE TABLE appLog
 1.查看DEBUG日志
 2.查看log4j 配置文件，一般是SQL语句写的不对导致的
 
-
+参考自这里完成了这次修改
+http://stackoverflow.com/questions/6734044/log4j-jdbcappender-to-log-stacktraces
